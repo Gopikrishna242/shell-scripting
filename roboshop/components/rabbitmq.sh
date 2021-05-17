@@ -9,7 +9,9 @@ curl -fsSL https://github.com/rabbitmq/signing-keys/releases/download/2.0/rabbit
 Stat $?
 
 Head "Setup RabbitMQ Sources"
-apt install apt-transport-https -y &>>$LOG && echo -e "deb https://dl.bintray.com/rabbitmq-erlang/debian focal erlang\ndeb https://dl.bintray.com/rabbitmq/debian bionic main" > /etc/apt/sources.list.d/bintray.rabbitmq.list && apt update -y &>>$LOG
+apt install apt-transport-https -y &>>$LOG && #echo -e "deb https://dl.bintray.com/rabbitmq-erlang/debian focal erlang\ndeb https://dl.bintray.com/rabbitmq/debian bionic main" > /etc/apt/sources.list.d/bintray.rabbitmq.list && apt update -y &>>$LOG
+&& echo -e "deb https://dl.bintray.com/rabbitmq-erlang/debian focal erlang\ndeb https://dl.bintray.com/rabbitmq/debian bionic main" > /etc/apt/sources.list.d/bintray.rabbitmq.list
+
 Stat $?
 
 Head "Install RabbitMQ"
