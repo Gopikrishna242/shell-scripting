@@ -24,7 +24,7 @@ cd /home/roboshop && rm -rf user && unzip -o /tmp/user.zip &>>$LOG && mv user-ma
 Stat $?
 
 Head "Update EndPoints in Service File"
-sed -i -e "s/MONGO_DNSNAME/mongodb.zsdevops01.online/" -e "s/REDIS_ENDPOINT/redis.zsdevops01.online/" -e 's/MONGO_ENDPOINT/mongodb.zsdevops01.online/' /home/roboshop/user/systemd.service
+sed -i -e "s/MONGO_DNSNAME/ip-172-31-28-183.ec2.internal/" -e "s/REDIS_ENDPOINT/ip-172-31-22-79.ec2.internal/" -e 's/MONGO_ENDPOINT/ip-172-31-28-183.ec2.internal/' /home/roboshop/user/systemd.service
 Stat $?
 
 
