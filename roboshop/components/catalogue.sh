@@ -24,7 +24,7 @@ cd /home/roboshop && rm -rf catalogue && unzip -o /tmp/catalogue.zip &>>$LOG && 
 Stat $?
 
 Head "Update EndPoints in Service File"
-sed -i -e "s/MONGO_DNSNAME/mongodb.zsdevops01.online/" /home/roboshop/catalogue/systemd.service
+sed -i -e "s/MONGO_DNSNAME/ec2-18-208-216-70.compute-1.amazonaws.com/" /home/roboshop/catalogue/systemd.service
 Stat $?
 
 
