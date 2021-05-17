@@ -32,7 +32,7 @@ Stat $?
 
 
 Head "Update EndPoints in Service File"
-sed -i -e "s/CARTHOST/cart.zsdevops01.online/" -e "s/USERHOST/user.zsdevops01.online/" -e "s/AMQPHOST/rabbitmq.zsdevops01.online/" /home/roboshop/payment/systemd.service
+sed -i -e "s/CARTHOST/ip-172-31-28-196.ec2.internal/" -e "s/USERHOST/ip-172-31-16-137.ec2.internal/" -e "s/RMQPHOST/ip-172-31-18-124.ec2.internal/" /home/roboshop/payment/systemd.service
 Stat $?
 
 
