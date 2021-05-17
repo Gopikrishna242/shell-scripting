@@ -24,7 +24,7 @@ cd /home/roboshop && rm -rf cart && unzip -o /tmp/cart.zip &>>$LOG && mv cart-ma
 Stat $?
 
 Head "Update EndPoints in Service File"
-sed -i -e "s/REDIS_ENDPOINT/redis.zsdevops01.online/" -e "s/CATALOGUE_ENDPOINT/catalogue.zsdevops01.online/" /home/roboshop/cart/systemd.service
+sed -i -e "s/REDIS_ENDPOINT/ec2-3-89-207-27.compute-1.amazonaws.com/" -e "s/CATALOGUE_ENDPOINT/ec2-54-242-52-60.compute-1.amazonaws.com/" /home/roboshop/cart/systemd.service
 Stat $?
 
 
