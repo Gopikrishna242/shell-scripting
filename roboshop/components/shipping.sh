@@ -23,7 +23,7 @@ cd /home/roboshop && rm -rf shipping && unzip -o /tmp/shipping.zip &>>$LOG && mv
 Stat $?
 
 Head "Update EndPoints in Service File"
-sed -i -e "s/CARTENDPOINT/cart.zsdevops01.online/" -e "s/DBHOST/mysql.zsdevops01.online/" /home/roboshop/shipping/systemd.service
+sed -i -e "s/CARTENDPOINT/ip-172-31-28-196.ec2.internal/" -e "s/DBHOST/ip-172-31-25-200.ec2.internal/" /home/roboshop/shipping/systemd.service
 Stat $?
 
 
