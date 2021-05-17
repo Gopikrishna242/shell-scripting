@@ -22,9 +22,9 @@ Stat $?
 
 Head "Update Nginx Configuration"
 mv roboshop.conf /etc/nginx/sites-enabled/roboshop.conf
-for comp in catalogue cart user shipping payment ; do
-  sed -i -e "/$comp/ s/localhost/${comp}.ec2-54-90-123-13.compute-1.amazonaws.com/" /etc/nginx/sites-enabled/roboshop.conf
-done
+#for comp in catalogue cart user shipping payment ; do
+  #sed -i -e "/$comp/ s/localhost/${comp}.ec2-54-90-123-13.compute-1.amazonaws.com/" /etc/nginx/sites-enabled/roboshop.conf
+#done
 Stat $?
 
 Head "Restart Nginx Service"
